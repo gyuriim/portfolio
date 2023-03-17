@@ -7,16 +7,21 @@
     <title>foresta</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 애니메이션 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
     <!-- display font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500&display=swap" rel="stylesheet">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!--banner full screen-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
-
+    
 </head>
 <body>
     <div class="wrap">
@@ -27,13 +32,30 @@
             <!-- 헤더 -->
             <header class="header">
                 <a href="#" class="logo"></a>
+
+                <!--햄버거메뉴-->
                 <div class="hamberger">
-                    ■
-                </div>
+                    <div class="overlay" id="myNav">
+                        <a href="javascript:void(0)" class="closebtn">&times;</a>
+                        <div class="overlay-content">
+                            <ul>
+                                <li><a href="#" class="overlay_top_menu">ABOUT</a>
+                                </li>
+                                <li><a href="#" class="overlay_top_menu">WORK</a>
+                                </li>
+                                <li><a href="#" class="overlay_top_menu">EXPERIENCE</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="open">&#9776;</span>
+                </div> 
+
                 <div class="arrow">
                     <img src="./images/arrow.png" alt="">
                 </div>
             </header>
+            
 
             <!-- main -->
             <div class="main">
@@ -61,7 +83,7 @@
                                 휘몰아치는 바다보단<br>
                                 감싸 안는 숲과 같은,
                             </div>
-                            <div class="contents-icon">
+                            <div class="contents-icon jello-vertical">
                                 <img src="./images/icon-01.png" alt="">
                             </div>
                         </div>
@@ -83,7 +105,28 @@
                     </div>
                     <div></div>
                     <div></div>
-                    <div class="main_back"></div>
+                    <div class="main_back mySwiper">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/main/01.jpg"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main/02.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main/03.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main/04.jpg" />
+                            </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                     <div></div>
                     <div class="book-leftnum">
                         <div>[cover]</div>
@@ -103,11 +146,15 @@
                 <a name="ankor-about">
                     <div class="layout-blank"></div>
                     <div class="layout">
-                        <div class="myphoto-back-01"></div>
+                        <div class="myphoto-back-01">
+                            <img src="./images/about/01.png" alt="">
+                        </div>
                         <div></div>
                         <div></div>
                         <div></div>
-                        <div class="myphoto-back-02"></div>
+                        <div class="myphoto-back-02">
+                            <img src="./images/about/02.png" alt="">
+                        </div>
                         <div></div>
                         <div class="book-leftnum">
                             <div>02</div>
@@ -132,17 +179,12 @@
                             <div class="contents-title">
                                 About:
                             </div>
-                            <div class="contents-icon">
+                            <div class="contents-icon jello-vertical">
                                 <img src="./images/icon-02.png" alt="">
                             </div>
                         </div>
-                        <div class="contents-blank"></div>
-                        <div class="contents-logo"></div>
                     </div>
                     <div>
-                        <div class="contents-text"></div>
-                        <div class="contents-blank"></div>
-                        <div class="contents-logo"></div>
                     </div>
                     <div></div>
                     <div></div>
@@ -191,23 +233,22 @@
                     <div class="layout-blank"></div>
                     <div class="layout">
                         <div>
-                            <div class="work-panel">
+                            <div class="work-panel active">
                                 <div class="panel-head">
                                     <sup>01</sup> <span class="upper">L</span>ouis poulsen lighting site redesign
                                 </div>
                                 <div class="panel-body">
                                     <div class="panel-body-text">
                                         <p>
-                                            단순 변역체로 이루어진 해외 명품조명 사이트, 체계적이지 못한 제품 IA,<br>
+                                            단순 변역체로 이루어진 해외 명품조명 사이트로 체계적이지 못한 제품 IA,<br>
                                             브랜드 아이덴티티의 시각적요소 부재라는 기존의 홈페이지의 단점을 보완한<br>
                                             감성적이고 다채로운 루이스폴센의 리디자인 홈페이지.
                                         </p>
                                     </div>
                                     <div class="panel-body-photo">
-                                        <div class="panel-body-photo-back">
-                                            <img src="./images/work/wokr-back.png" alt="">
+                                        <div class="panel-body-photo-site louis">
                                         </div>
-                                        <div class="panel-body-photo-make"></div>
+                                        <div class="panel-body-photo-back"></div>
                                     </div>
                                     <div class="panel-body-text-sort">
                                         <div class="panel-body-text-sort-left">
@@ -232,26 +273,110 @@
                                 <div class="panel-head">
                                     <sup>02</sup> <span class="upper">K</span>ingsman tailor shop
                                 </div>
-                                <div class="panel-body">02</div>
+                                <div class="panel-body">
+                                    <div class="panel-body-text">
+                                        <p>
+                                            테일러룩이 과거에 비해 많이 대중화 돼었으나 관련된 홈페이지는 미비.<br>
+                                            테일러룩 자체의 고급지고 세련된 이미지를 살리 되 쉽고 눈에 잘띄는,<br>
+                                            영화 킹스맨 속 인테리어를 모티브로 한 홈페이지.
+                                        </p>
+                                    </div>
+                                    <div class="panel-body-photo">
+                                        <div class="panel-body-photo-site kings">
+                                        </div>
+                                        <div class="panel-body-photo-back"></div>
+                                    </div>
+                                    <div class="panel-body-text-sort">
+                                        <div class="panel-body-text-sort-left">
+                                            <p>
+                                                프로젝트구성<br>담당페이지<br>사용툴
+                                            </p>
+                                        </div>
+                                        <div class="panel-body-text-sort-right">
+                                            <p> 반응형웹 main+sub (브랜드소개페이지, 팀원소개페이지, 비스포크페이지, 콜렉션페이지)<br>
+                                                main페이지<br>
+                                                Photoshop<br>
+                                                Html<br>
+                                                Css<br>
+                                                Java script<br>
+                                                Figma
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="work-panel">
                                 <div class="panel-head">
                                     <sup>03</sup> <span class="upper">D</span>osiraktong clone coding
                                 </div>
-                                <div class="panel-body">03</div>
+                                <div class="panel-body">
+                                    <div class="panel-body-text">
+                                        <p>
+                                            코딩 실력 향상을 위해 gd웹 web부분 와이파이 도시락통 사이트를<br>
+                                            클론 코딩한 홈페이지.
+                                        </p>
+                                    </div>
+                                    <div class="panel-body-photo">
+                                        <div class="panel-body-photo-site dosirak">
+                                        </div>
+                                        <div class="panel-body-photo-back"></div>
+                                    </div>
+                                    <div class="panel-body-text-sort">
+                                        <div class="panel-body-text-sort-left">
+                                            <p>
+                                                프로젝트구성<br>담당페이지<br>사용툴
+                                            </p>
+                                        </div>
+                                        <div class="panel-body-text-sort-right">
+                                            <p> 반응형웹 main<br>
+                                                main페이지<br>
+                                                Html<br>
+                                                Css<br>
+                                                Java script<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="work-panel">
                                 <div class="panel-head">
                                     <sup>04</sup> <span class="upper">C</span>ompony logo design
                                 </div>
-                                <div class="panel-body">04</div>
+                                <div class="panel-body">
+                                    <div class="panel-body-text">
+                                        <p>
+                                            첨단산업용 SMMS(4중) 부직포를 생산 판매하는 (주)미래첨단산업 회사.<br>
+                                            첨단산업의 이미지에 더해 신뢰감이 있고 고급진 기업의 이미지를 표현한<br>
+                                            라우드소싱 당선작 로고 디자인.
+                                        </p>
+                                    </div>
+                                    <div class="panel-body-photo">
+                                        <div class="panel-body-photo-site mirea">
+                                        </div>
+                                        <div class="panel-body-photo-back"></div>
+                                    </div>
+                                    <div class="panel-body-text-sort">
+                                        <div class="panel-body-text-sort-left">
+                                            <p>
+                                                프로젝트구성<br>담당페이지<br>사용툴
+                                            </p>
+                                        </div>
+                                        <div class="panel-body-text-sort-right">
+                                            <p> 반응형웹 main+sub (브랜드소개페이지, 팀원소개페이지, 비스포크페이지, 콜렉션페이지)<br>
+                                                main페이지<br>
+                                                Photoshop<br>
+                                                illustrator<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div></div>
                         <div></div>
                         <div></div>
                         <div class="else-contents">
-                            <div class="contents-icon">
+                            <div class="contents-icon jello-vertical">
                                 <img src="./images/icon-03.png" alt="">
                             </div>
                             <div class="contents-title">
@@ -284,7 +409,7 @@
                                 <div class="contents-title">
                                     Experience:
                                 </div>
-                                <div class="contents-icon">
+                                <div class="contents-icon jello-vertical">
                                     <img src="./images/icon-04.png" alt="">
                                 </div>
                             </div>
@@ -363,6 +488,8 @@
     <!-- 사용자 스크립트 -->
     <script src="js/script.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 </body>
 </html>

@@ -66,6 +66,48 @@ var scroll = function(){
 scroll();
 
 
+// /* 스와이퍼 */
+// var swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 30,
+//     effect: "fade",
+//     autoplay: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+// });
+
+
+
+// /* 스크롤 부드럽게 */
+// var headerScroll = document.querySelectorAll('.layout-category');
+
+// headerScroll.addEventListener('click', e => {
+//     this.classList.add('scroll-behavior:smooth')
+// })
+
+
+
+
+/* 햄버거버튼 */
+const openBtn = document.querySelector(".open")
+const closeBtn = document.querySelector(".closebtn")
+
+openBtn.addEventListener("click",function(e){
+    document.querySelector("#myNav").style.width = "50%"
+})
+
+closeBtn.addEventListener("click",function(e){
+    document.querySelector("#myNav").style.width = "0"
+})
+
+
+
+
 /* 아코디언메뉴 */
 var workPanel = document.querySelectorAll('.work-panel');
 
@@ -81,6 +123,7 @@ for(var i=0; i < workPanel.length; i++) {
 
 
 
+
 /* 마우스호버 */
 const experienceTypeList = document.querySelectorAll('experience-type-list > li') 
 const experiencePhoto = document.querySelectorAll('experience-photo > div')
@@ -92,24 +135,3 @@ experienceTypeList.forEach(item => {
     });
 
 })
-
-
-
-
-
-
-
-
-// 햄버거 버튼
-// const openBtn = document.querySelector(".open")
-// const closeBtn = document.querySelector(".closebtn")
-
-// openBtn.addEventListener("click",function(e){
-//     document.querySelector("#myNav").style.width = "100%"
-// })
-
-// closeBtn.addEventListener("click",function(e){
-//     document.querySelector("#myNav").style.width = "0"
-// })
-
-
