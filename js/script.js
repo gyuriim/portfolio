@@ -83,12 +83,13 @@ scroll();
 
 
 
+
 // /* 스크롤 부드럽게 */
 // var headerScroll = document.querySelectorAll('.layout-category');
 
 // headerScroll.addEventListener('click', e => {
 //     this.classList.add('scroll-behavior:smooth')
-// })
+// });
 
 
 

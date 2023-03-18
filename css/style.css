@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* scroll-behavior:smooth; */
+    /* scroll-behavior:smooth; 스크롤 충돌??오류??  */  
 }
 ul, li {
     list-style: none;
@@ -34,16 +34,18 @@ body {
     line-height: 1;
     letter-spacing: 0;
     word-break: keep-all;
+    scroll-behavior:smooth;
 }
 .display {
     display: block;
 }
 
 
+
 /* 애니메이션 */
 .jello-vertical {
 	-webkit-animation: jello-vertical 0.9s both;
-	        animation: jello-vertical 0.9s both;
+    animation: jello-vertical 0.9s both;
 }
 
 /* ----------------------------------------------
@@ -59,7 +61,7 @@ body {
  * ----------------------------------------
  */
 
- @-webkit-keyframes jello-vertical {
+@-webkit-keyframes jello-vertical {
     0% {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
@@ -126,12 +128,12 @@ body {
     display: block;
 }
 .layout-top {
-    width: 96vw;
+    width: 95vw; /*왜 layout은 with값을 안줘도 되는데 이거는 줘야하지??*/
     position: fixed;
     margin-left: 65px;
     display: grid;
-    grid-template-columns: 34.16fr 1.6fr 1fr 1.6fr 34.16fr 1.6fr;
-    grid-template-rows: 55px;
+    grid-template-columns: 1fr 40px 25px 40px 1fr 40px;
+    grid-template-rows: 5vh; /*밑에 blank랑 똑같이 height값을 줫는데 1픽셀(선두께)만큼 차이가 나는지*/
     border-top: 1px solid #C4C4B8;
     border-bottom: 1px solid #C4C4B8;
     z-index: 998;
@@ -139,8 +141,8 @@ body {
 .layout {
     margin-left: 65px;
     display: grid;
-    grid-template-columns: 34.16fr 1.6fr 1fr 1.6fr 34.16fr 1.6fr;
-    grid-template-rows: 857px 55px;
+    grid-template-columns: 1fr 40px 25px 40px 1fr 40px;
+    grid-template-rows: 90vh 5vh;    /*픽셀로 고정값말고 모니터사양에 따라 자동으로 100vh가 되게*/
     border-top: 1px solid #C4C4B8;
 }
 .layout-top > div {
@@ -151,7 +153,7 @@ body {
     border-bottom: 1px solid #C4C4B8;
 }
 .layout-blank {
-    height: 56px;
+    height: 5vh;
     width: 100%;
 }
 
@@ -188,16 +190,14 @@ body {
 .upper {
     font-size: 26px;
 }
-.book-leftnum {
+.book-leftnum, .book-rightnum{
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 0 20px 0 20px;
+    font-weight: 800;
 }
 .book-rightnum {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    padding-right: 20px;
 }
 
 
@@ -286,27 +286,11 @@ body {
     position: relative;
     display: block;
 }
-.main_back{
-    
+.main-contents-grid {
+    display: grid;
+    grid-template-rows: 2fr 15px 1fr;
 }
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-}
-
 .contents-text {
-    height: 540px;
     display: flex;
     justify-content: space-between;
     margin: 20px 20px 0 20px;
@@ -325,23 +309,37 @@ body {
     height: 100%;
 }  
 .contents-blank {
-    height: 15px;
     border-top: 1px solid #C4C4B8;
     border-bottom: 1px solid #C4C4B8;
 }
 .contents-logo {
+    margin-top: 30px;
     text-align: center;
 }
 .title-text {
-    font-size: 180px;
+    font-size: 9.5vw;
     font-family: 'Noto Serif Display', serif;
     font-weight: 500;
     letter-spacing: 10px;
-    margin: 30px 0 10px 0;
 }
 .second-text {
     line-height: 20px;
 }
+
+/*스와이퍼*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
 
 
 /* 내사진 */
@@ -351,24 +349,10 @@ body {
 }
 .myphoto-back-01 img, .myphoto-back-02 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     filter: saturate(30%);
     
 }
-/* .myphoto-back-01 {
-    background-image: url('../images/about/01.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size : cover;
-    filter: saturate(30%);
-}
-.myphoto-back-02 {
-    background-image: url('../images/about/02.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size : cover;
-    filter: saturate(20%);
-} */
 .myphoto-back-01 img:hover, .myphoto-back-02 img:hover {
     filter: saturate(100%);
 }
@@ -386,32 +370,34 @@ body {
     letter-spacing: 2px;
 }
 .about-text {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 2.85fr;
+    grid-template-rows: 100%;
 }
 .about-left {
     padding: 20px 0 0 20px;
-    width: 220px;
     border-right: 1px solid #C4C4B8;
 }
 .about-right {
-    margin: 0 auto;
+    margin: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .right-text {
-    width: 595px;
     font-size: 20px;
     font-weight: 800;
-    line-height: 26px;
+    line-height: 25px;
     text-align: justify;
-    margin: 20px 0 65px 0;
 }
 sup {
     font-family: 'poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
+    text-decoration: underline;
 }
 .right-photo img {
-    width: 595px;
+    width: 100%;
 }
 
 
@@ -428,15 +414,15 @@ sup {
     cursor: pointer;
     font-size: 23px;
     font-weight: 800;
-    height: 55px;
-    line-height: 50px;
+    height: 5.9vh;
+    line-height: 5.9vh;
 }
 .panel-head:hover {
     color: #79796b;
 }
 .panel-body {
     display: none;
-    height: 633px;
+    height: 66vh;
 }
 .active .panel-body {
     display: block;
@@ -528,26 +514,26 @@ sup {
 }
 .experience-rec img {
     position: absolute;
-    width: 250px;
+    width: 13vw;
 }
 .experience-rec .rec-01 {
-    left: 460px;
+    left: 24vw;
     top: 120px;
 }
 .experience-rec .rec-02 {
-    left: 230px;
+    left: 12vw;
     top: 280px;
 }
 .experience-rec .rec-03 {
-    left: 160px;
+    left: 8vw;
     top: 80px;
 }
 .experience-rec .rec-04 {
-    left: 420px;
+    left: 22vw;
     top: 330px;
 }
 .experience-rec .rec-05 {
-    left: 355px;
+    left: 18.5vw;
     top: 195px;
 }
 .experience-photo img {
@@ -593,13 +579,15 @@ sup {
     font-size: 90;
 }
 .experience-type-list li {
+    display:flex;
+    align-items:center;
     height: 130px;
+    padding-left: 20px;
     color: #CFCFC5;
     font-size: 80px;
     border-bottom: 1px solid #C4C4B8;
     font-family: 'Noto Serif Display', serif;
     font-weight: 400;
-    padding: 23px 0 0 20px;
     transition: color 1s;
 }
 .experience-type-list li:hover {
@@ -618,7 +606,7 @@ sup {
     height: 1px;
     background: black;
     transition: width 1s;
-  }
+}
 .experience-type-list > span:hover >  li::after {
     width: 100%;
 }
