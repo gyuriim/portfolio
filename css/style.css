@@ -39,7 +39,7 @@ body {
 }
 .show {
     display: block !important;
-    
+    transition: all 1s;
 }
 
 
@@ -54,7 +54,7 @@ body {
     margin-left: 65px;
     display: grid;
     grid-template-columns: 1fr 40px 25px 40px 1fr 40px;
-    grid-template-rows: 5vh; /*밑에 blank랑 똑같이 height값을 줫는데 1픽셀(선두께)만큼 차이가 나는지*/
+    grid-template-rows: calc(5vh - 1px);
     border-top: 1px solid #C4C4B8;
     border-bottom: 1px solid #C4C4B8;
     z-index: 998;
@@ -75,7 +75,7 @@ body {
     border-bottom: 1px solid #C4C4B8;
 }
 .layout-blank {
-    height: 5vh;
+    height: calc(5vh - 1px);;
     width: 100%;
 }
 
@@ -124,83 +124,56 @@ body {
 
 
 /* header */
-.header {
-    padding: 30px 0 40px 0;
+.header-box {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
     border: 1px solid #C4C4B8;
+    background-color: #F2F1EE;
+    z-index: 999;
+}
+.header-header {
     width: 65px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
-    position: fixed;
-    z-index: 999;
+    padding: 30px 0 20px 0;
+    border-left: 1px solid #C4C4B8;
 }
-.logo {
-    background-image: url('../images/logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 65px;
-    height: 110px;
-    cursor: pointer;
-}
-
-/*햄버거메뉴*/
 .hamberger {
-    width: 50px;
-    height: 50px;
-    display: block;
-    z-index: 99;
-}
-.open {
-    font-size: 2rem;
     cursor: pointer;
 }
-.overlay {
-    display: flex;
-    position: fixed; 
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color:black;
-    z-index: 99;
-    overflow-x: hidden;
-    transition: 0.5s;
+.header-arrow img {
+    height: 5vh;
+    transition: all 1s ease-in-out;
+}
+.arrow-rotate {
+    transition: all 1s ease-in-out;
+    transform: rotate(90deg) !important;
+}
+.header-body {
     width: 0;
+    height: 100vh;
+    margin-top: 40px;
+    padding-left: 3vw;
+    font-size: 5.5vw;
+    line-height: 7vw;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 500;
+    display: none;
 }
-.overlay .overlay ul, .overlay li {
-    list-style: none;
-}
-.overlay .overlay_top_menu {
-    font-size: 30px;
-    padding-top: 30px;
-}
-.overlay-content {
-    position: absolute;
-    top: 15%;
-}
-.overlay a {
+.body-show {
+    width: calc(50vw - 65px);
     display: block;
-    text-decoration: none;
-    color: white;
-    transition: 0.5s;
-}
-.overlay a:hover,
-.overlay a:focus {
-    color: #c6a55d;
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 0rem;
-    left: 50px;
-    font-size: 3rem;
+
 }
 
-.arrow img {
-    height: 50px;
-}
+
+
 
 
 /* main */
@@ -251,6 +224,7 @@ body {
     filter: saturate(20%);
 }
 
+
 /*스와이퍼*/
 .swiper {
     width: 100%;
@@ -289,11 +263,14 @@ body {
     position: relative;
     display: block;
 }
-.contents-title {
+.contents-title, .contents-title-experience {
     font-family: 'Noto Serif Display', serif;
     font-size: 90px;
     font-weight: 500;
     letter-spacing: 2px;
+}
+.contents-title-experience {
+    display: none;
 }
 .about-text {
     display: grid;
@@ -365,11 +342,11 @@ sup {
 .panel-body-photo {
     position: relative;
     float: right;
-    margin: 25px 20px 25px 0;
+    margin: 40px 20px 40px 0;
 }
 .panel-body-photo-site {
     width: 26vw;
-    height: 30vh;
+    height: 15vw;
 }
 .panel-body-photo-back {
     display: flex;
@@ -378,15 +355,15 @@ sup {
     background-color: black;
     border-radius: 10px;
     width: 27vw;
-    height: 34vh;
+    height: 17vw;
 }
 .panel-body-text-sort {
     clear: both;
     display: flex;
     justify-content: flex-start;
     font-size: 16px;
-    line-height: 22px;
-    font-weight: 700;
+    line-height: 23px;
+    font-weight: 800;
     margin-bottom: 10px;
 }
 .panel-body-text-sort-left {
@@ -467,7 +444,7 @@ sup {
 }
 .experience-photo img {
     position: absolute;
-    border: 2px solid #C4C4B8;
+    border: 5px solid white;
 }
 .photo-01 {
     width: 20vw;

@@ -6,9 +6,6 @@
 }
 
 @media (max-width: 1590px) {
-    * {
-        transition: all 0.5s;
-    }
     .layout-top, .book-leftnum, .book-rightnum {
         font-size: 14px;
     }
@@ -35,10 +32,10 @@
         display: none;
         height: 67.5vh;
     }
-    .panel-body-photo-back {
+    /* .panel-body-photo-back {
         width: 27vw;
         height: 34vh;
-    }
+    } */
     .panel-body-text-sort {
         font-size: 15px;
         line-height: 19px;
@@ -72,27 +69,27 @@
 }
 
 @media (max-width: 1280px) {
-    /* .upper {
-        font-size: 23px;
-    } */
-    /* .right-text {
-        font-size: 17px;
-        line-height: 21px;
-    } */
+    .contents-title, .contents-title-experience {
+        font-size: 70px;
+        transition: all 0.5s;
+    }
+    .experience-title {
+        display: none;
+    }
+    .contents-title-experience {
+        display: block;
+    }
     .experience-type-list li {
         font-size: 55px;
         transition: all 0.5s;
     }
+    
 }
 
 
 @media (max-width: 1024px) {
-    * {
-        font-size: 14px;
-        transition: all 0.5s;
-    }
-    .contents-title {
-        font-size: 60px;
+    .contents-title, .contents-title-experience {
+        font-size: 65px;
         transition: all 0.5s;
     }
     .about-text {
@@ -121,6 +118,11 @@
         width: 25px;
         height: 25px;
     }
+    .experience-type-list li {
+        font-size: 50px;
+        transition: all 0.5s;
+    }
+    
 
     
 }

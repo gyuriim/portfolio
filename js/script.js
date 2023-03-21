@@ -61,16 +61,32 @@ var scroll = function(){
         });
     };
 
-    const $menuAbout = document.querySelector('#menu_about');
+    /*클릭시 페이지이동*/
+    const $menuAbout = document.querySelector('.menu_about');
+    const $idmenuAbout = document.querySelector('#menu_about');
+
     $menuAbout.addEventListener('click', e => {
         moving(1);
     });
-    const $menuWork = document.querySelector('#menu_work');
+    $idmenuAbout.addEventListener('click', e => {
+        moving(1);
+    });
+
+    const $menuWork = document.querySelector('.menu_work');
+    const $idmenuWork = document.querySelector('#menu_work');
     $menuWork.addEventListener('click', e => {
         moving(3);
     });
-    const $menuExperience = document.querySelector('#menu_experience');
+    $idmenuWork.addEventListener('click', e => {
+        moving(3);
+    });
+
+    const $menuExperience = document.querySelector('.menu_experience');
+    const $idmenuExperience = document.querySelector('#menu_experience');
     $menuExperience.addEventListener('click', e => {
+        moving(4);
+    });
+    $idmenuExperience.addEventListener('click', e => {
         moving(4);
     });
 };
@@ -92,22 +108,19 @@ scroll();
 
 
 
-/* 햄버거버튼 */
-const openBtn = document.querySelector(".open")
-const closeBtn = document.querySelector(".closebtn")
+/* header 아코디언 */
+const $hamberger = document.querySelector('.hamberger');
+const $headerBody = document.querySelector('.header-body')
+const $headerImg = document.querySelector('.header-arrow img')
 
-openBtn.addEventListener("click",function(e){
-    document.querySelector("#myNav").style.width = "50%"
-})
-
-closeBtn.addEventListener("click",function(e){
-    document.querySelector("#myNav").style.width = "0"
-})
+$hamberger.addEventListener('click', e => {
+    $headerBody.classList.toggle('body-show');
+    $headerImg.classList.toggle('arrow-rotate');;
+});
 
 
 
-
-/* 아코디언메뉴 */
+/* work 아코디언메뉴 */
 var workPanel = document.querySelectorAll('.work-panel');
 
 for(var i=0; i < workPanel.length; i++) {
