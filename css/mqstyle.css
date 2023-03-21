@@ -30,12 +30,8 @@
     }
     .panel-body {
         display: none;
-        height: 67.5vh;
+        height: 67.6vh;
     }
-    /* .panel-body-photo-back {
-        width: 27vw;
-        height: 34vh;
-    } */
     .panel-body-text-sort {
         font-size: 15px;
         line-height: 19px;

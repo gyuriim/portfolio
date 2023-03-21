@@ -62,6 +62,16 @@ var scroll = function(){
     };
 
     /*클릭시 페이지이동*/
+    const $menuHome = document.querySelector('.menu_home');
+    const $idmenuHome = document.querySelector('#menu_home');
+
+    $menuHome.addEventListener('click', e => {
+        moving(0);
+    });
+    $idmenuHome.addEventListener('click', e => {
+        moving(0);
+    });
+
     const $menuAbout = document.querySelector('.menu_about');
     const $idmenuAbout = document.querySelector('#menu_about');
 

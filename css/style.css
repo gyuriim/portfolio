@@ -445,6 +445,8 @@ sup {
 .experience-photo img {
     position: absolute;
     border: 5px solid white;
+    border-bottom: 20px solid white;
+
 }
 .photo-01 {
     width: 20vw;
