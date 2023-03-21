@@ -9,9 +9,44 @@
     * {
         transition: all 0.5s;
     }
-    .right-text {
+    .layout-top, .book-leftnum, .book-rightnum {
+        font-size: 14px;
+    }
+    .sub-text {
+        line-height: 21px;
+        font-size: 19px;
+    }    
+    .right-text, .panel-body-text {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .panel-head {
         font-size: 18px;
-        line-height: 23px;
+        height: 5.5vh;
+        line-height: 5.5vh;
+    }
+    sup {
+        font-size: 14px;
+    }
+    .upper {
+        font-size: 23px;
+    }
+    .panel-body {
+        display: none;
+        height: 67.5vh;
+    }
+    .panel-body-photo-back {
+        width: 27vw;
+        height: 34vh;
+    }
+    .panel-body-text-sort {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .experience-type-list li {
+        font-size: 65px;
+        height: 14.5vh;
+        transition: all 0.5s;
     }
 }
 
@@ -21,7 +56,6 @@
         transition: all 0.5s;
     }
     .experience-type-list li {
-        font-size: 65px;
         transition: all 0.5s;
     }
     .contents-icon {
@@ -38,21 +72,13 @@
 }
 
 @media (max-width: 1280px) {
-    * {
-        transition: all 0.5s;
-    }
-    .upper {
+    /* .upper {
         font-size: 23px;
-    }
-    .right-text {
+    } */
+    /* .right-text {
         font-size: 17px;
         line-height: 21px;
-    }
-    .sub-text {
-        line-height: 22px;
-        font-size: 18px;
-        font-weight: 800;
-    }    
+    } */
     .experience-type-list li {
         font-size: 55px;
         transition: all 0.5s;
@@ -69,7 +95,6 @@
         font-size: 60px;
         transition: all 0.5s;
     }
-
     .about-text {
         display: flex;
         flex-direction: column;

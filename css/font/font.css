@@ -1,0 +1,68 @@
+/* Noto Sans KR */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NotoSansKR-Regular.otf"), format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../font/NotoSansKR-Bold.otf"), format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: black;
+  font-weight: 900;
+  src: url("../font/NotoSansKR-Black.otf"), format("opentype");
+}
+
+/* Noto Sans display */
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/static/NotoSerifDisplay/NotoSerifDisplay-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../font/static/NotoSerifDisplay/NotoSerifDisplay-Bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: bold;
+  font-weight: 800;
+  src: url("../font/static/NotoSerifDisplay/NotoSerifDisplay-ExtraBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: bold;
+  font-weight: 900;
+  src: url("../font/static/NotoSerifDisplay/NotoSerifDisplay-Black.ttf") format("opentype");
+}
+
+/* poppins */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Poppins-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: Medium;
+  font-weight: 500;
+  src: url("../font/Poppins-Medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: Medium;
+  font-weight: 700;
+  src: url("../font/Poppins-Bold.ttf") format("opentype");
+}
+
+
+

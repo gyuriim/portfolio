@@ -60,7 +60,19 @@ var scroll = function(){
           time = false; // 휠 이벤트가 끝나면 false로 변경
         });
     };
-    
+
+    const $menuAbout = document.querySelector('#menu_about');
+    $menuAbout.addEventListener('click', e => {
+        moving(1);
+    });
+    const $menuWork = document.querySelector('#menu_work');
+    $menuWork.addEventListener('click', e => {
+        moving(3);
+    });
+    const $menuExperience = document.querySelector('#menu_experience');
+    $menuExperience.addEventListener('click', e => {
+        moving(4);
+    });
 };
 
 scroll();
@@ -75,20 +87,6 @@ scroll();
 //       nextEl: ".swiper-button-next",
 //       prevEl: ".swiper-button-prev",
 //     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-// });
-
-
-
-
-// /* 스크롤 부드럽게 */
-// var headerScroll = document.querySelectorAll('.layout-category');
-
-// headerScroll.addEventListener('click', e => {
-//     this.classList.add('scroll-behavior:smooth')
 // });
 
 
@@ -126,13 +124,15 @@ for(var i=0; i < workPanel.length; i++) {
 
 
 /* 마우스호버 */
-const experienceTypeList = document.querySelectorAll('experience-type-list > li') 
-const experiencePhoto = document.querySelectorAll('experience-photo > div')
+const experienceTypeList = document.querySelectorAll('.experience-type-list > li') 
+const experiencePhoto = document.querySelectorAll('.experience-photo > div > img')
 
-experienceTypeList.forEach(item => {
-
+experienceTypeList.forEach((item, idx) => {
     item.addEventListener('mouseover', e => {
-        experiencePhoto.classList.add("display");
+        experiencePhoto[idx].classList.add("show");
     });
-
+    item.addEventListener('mouseleave', e => {
+        experiencePhoto[idx].classList.remove("show");
+    });
 })
+
