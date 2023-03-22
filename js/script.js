@@ -60,6 +60,7 @@ var scroll = function(){
         });
     };
 
+    
 
     /*클릭시 페이지이동*/
     const $menuHome = document.querySelector('.menu_home');
@@ -105,9 +106,7 @@ var scroll = function(){
 
 scroll();
 
-
-
-/* 스와이퍼 */
+// /* 스와이퍼 */
 // var swiper = new Swiper(".mySwiper", {
 //     spaceBetween: 30,
 //     effect: "fade",
