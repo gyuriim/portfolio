@@ -238,24 +238,13 @@ body {
     line-height: 20px;
 }
 .main_back {
-    filter: saturate(20%);
-}
-
-
-/*스와이퍼*/
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-.swiper-slide {
+    background-image: url('../images/main/main-back.png');
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    filter: saturate(40%)
 }
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
