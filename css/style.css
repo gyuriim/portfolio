@@ -344,6 +344,14 @@ sup {
     font-weight: 800;
     line-height: 22px;
     letter-spacing: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-right: 20px;
+}
+.site-icon {
+    width: 2.2vw;
+    height: 2vw;
 }
 .panel-body-photo {
     position: relative;
