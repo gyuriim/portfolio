@@ -1,6 +1,5 @@
 /* 풀스크린 */ 
 var scroll = function(){
-    
     var $cnt = null,
         moveCnt = null,
         moveIndex = 0,
@@ -61,6 +60,7 @@ var scroll = function(){
         });
     };
 
+
     /*클릭시 페이지이동*/
     const $menuHome = document.querySelector('.menu_home');
     const $idmenuHome = document.querySelector('#menu_home');
@@ -99,20 +99,23 @@ var scroll = function(){
     $idmenuExperience.addEventListener('click', e => {
         moving(4);
     });
+
+
 };
 
 scroll();
 
 
-// /* 스와이퍼 */
+
+/* 스와이퍼 */
 // var swiper = new Swiper(".mySwiper", {
 //     spaceBetween: 30,
 //     effect: "fade",
 //     autoplay: true,
 //     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+// },
 // });
 
 
@@ -120,11 +123,13 @@ scroll();
 
 /* header 아코디언 */
 const $hamberger = document.querySelector('.hamberger');
-const $headerBody = document.querySelector('.header-body')
-const $headerImg = document.querySelector('.header-arrow img')
+const $headerBox = document.querySelector('.header-box');
+const $headerBody = document.querySelector('.header-body');
+const $headerImg = document.querySelector('.header-arrow img');
 
 $hamberger.addEventListener('click', e => {
-    $headerBody.classList.toggle('body-show');
+    $headerBox.classList.toggle('headerBox-open');
+    $headerBody.classList.toggle('headerBody-open');
     $headerImg.classList.toggle('arrow-rotate');;
 });
 

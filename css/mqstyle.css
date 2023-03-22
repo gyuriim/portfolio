@@ -32,6 +32,9 @@
         display: none;
         height: 67.6vh;
     }
+    .panel-body-photo {
+        margin: 25px 20px 25px 0;
+    }
     .panel-body-text-sort {
         font-size: 15px;
         line-height: 19px;

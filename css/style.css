@@ -126,12 +126,19 @@ body {
 /* header */
 .header-box {
     position: fixed;
+    width: calc(46vw + 65px);
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
     border: 1px solid #C4C4B8;
     background-color: #F2F1EE;
+    overflow: hidden;
+    transform: translateX(-46vw);
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1);
     z-index: 999;
+}
+.header-box.headerBox-open {
+    transform: translateX(0px);
 }
 .header-header {
     width: 65px;
@@ -156,23 +163,23 @@ body {
     transform: rotate(90deg) !important;
 }
 .header-body {
-    width: 0;
     height: 100vh;
     margin-top: 40px;
-    padding-left: 3vw;
+    padding-right: 14vw;
     font-size: 5.5vw;
     line-height: 7vw;
     font-family: 'Noto Serif Display', serif;
     font-weight: 500;
-    display: none;
+    overflow: hidden;
+    transform: translateX(-46vw);
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1);
 }
-.body-show {
-    width: calc(50vw - 65px);
-    display: block;
-
+.header-body.headerBody-open {
+    transform: translateX(0px);
 }
-
-
+.header-body li:hover {
+    color: #C4C4B8;
+}
 
 
 
@@ -199,6 +206,9 @@ body {
     width: 33px;
     height: 33px;
 }
+.contents-icon img:hover {
+    animation: jello-vertical 0.9s both;
+}
 .contents-icon img {
     float: right;
     height: 100%;
@@ -212,10 +222,17 @@ body {
     text-align: center;
 }
 .title-text {
+    display: flex;
+    justify-content: center;
+}
+.title-text p {
     font-size: 9.5vw;
     font-family: 'Noto Serif Display', serif;
     font-weight: 500;
     letter-spacing: 10px;
+}
+.fade-in-bottom-delay-01{
+    animation-duration: 2s;
 }
 .second-text {
     line-height: 20px;
@@ -524,6 +541,24 @@ sup {
 
 
 /* 애니메이션 */
+.fade-in-bottom-01 {
+	-webkit-animation: fade-in-bottom 1s ease-in-out both;
+	        animation: fade-in-bottom 1s ease-in-out both;
+}
+.fade-in-bottom-02 {
+	-webkit-animation: fade-in-bottom 2s ease-in-out both;
+	        animation: fade-in-bottom 2s ease-in-out both;
+}
+.fade-in-bottom-03 {
+	-webkit-animation: fade-in-bottom 1s ease-in-out both;
+	        animation: fade-in-bottom 1s ease-in-out both;
+            animation-delay: 0.5s;
+}.fade-in-bottom-04 {
+	-webkit-animation: fade-in-bottom 1s ease-in-out both;
+	        animation: fade-in-bottom 1s ease-in-out both;
+            animation-delay: 0.3s;
+}
+
 .jello-vertical {
 	-webkit-animation: jello-vertical 0.9s both;
             animation: jello-vertical 0.9s both;
@@ -565,6 +600,26 @@ sup {
  * animation jello-vertical
  * ----------------------------------------
  */
+
+@-webkit-keyframes fade-in-bottom {
+    0%{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        transform:translateY(100%);
+    }
+    100%{
+        clip-path:polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+@keyframes fade-in-bottom {
+    0%{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        transform:translateY(100%);
+    }
+    100%{
+        clip-path:polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+  
 @-webkit-keyframes slide-in-bl {
     0% {
         -webkit-transform: translateY(1000px) translateX(-1000px) rotate(-540deg);
