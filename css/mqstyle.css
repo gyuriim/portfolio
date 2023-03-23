@@ -13,10 +13,10 @@
         line-height: 21px;
         font-size: 19px;
     }    
-    .right-text {
+    /* .right-text {
         font-size: 1.2vw;
         line-height: 1.4vw;
-    }
+    } */
     .panel-head {
         font-size: 18px;
         height: 5.5vh;
@@ -35,10 +35,10 @@
     .panel-body-photo {
         margin: 25px 20px 25px 0;
     }
-    .panel-body-text, .panel-body-text-sort {
+    /* .panel-body-text, .panel-body-text-sort {
         font-size: 1.3vw;
         line-height: 1.2vw;
-    }
+    } */
     .experience-type-list li {
         font-size: 65px;
         height: 14.5vh;
