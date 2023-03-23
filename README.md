@@ -1,3 +1,3 @@
 # portfolio
 
-https://github.com/gyuriim/portfolio/main.html
+https://gyuriim.github.io/portfolio/main.html
