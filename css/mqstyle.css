@@ -13,10 +13,10 @@
         line-height: 21px;
         font-size: 19px;
     }    
-    /* .right-text {
-        font-size: 1.2vw;
-        line-height: 1.4vw;
-    } */
+    .right-text {
+        font-size: 18px;
+        line-height: 23px;
+    }
     .panel-head {
         font-size: 18px;
         height: 5.5vh;
@@ -35,10 +35,14 @@
     .panel-body-photo {
         margin: 25px 20px 25px 0;
     }
-    /* .panel-body-text, .panel-body-text-sort {
-        font-size: 1.3vw;
-        line-height: 1.2vw;
-    } */
+    .panel-body-text {
+        font-size: 16px; 
+        line-height: 20px;
+    }
+    .panel-body-text-sort {
+        font-size: 16px;
+        line-height: 2.5vh;
+    }
     .experience-type-list li {
         font-size: 65px;
         height: 14.5vh;
@@ -184,16 +188,14 @@
     .layout {
         margin-left: 0;
         display: block;
-        border-left: 1px solid #C4C4B8;
     }
     .layout-blank {
-        height: 8vh;
+        height: calc(8vh - 2px);
     }
-    /* .layout > div {
-        border-right: 1px solid #C4C4B8;
-        border-bottom: 1px solid #C4C4B8;
+    .layout > div {
+        border-left: 1px solid #C4C4B8;
     }
- */
+
     /* .layout-top {
         width: calc(100% - 65px); 
         position: fixed;
@@ -241,11 +243,14 @@
     .book-rightnum{
         float: right;
         width: 100%;
-        height: calc(8vh - 2px);
+        height: 8vh;
         position: relative;
         padding: 0 20px 0 20px;
         font-weight: 800;
         border-left: 1px solid #C4C4B8;
+    }
+    .myphoto-back-01, .myphoto-back-02 {
+        height: 41vh;
     }
     .myphoto-back-01 img, .myphoto-back-02 img {
         display: none;
@@ -265,7 +270,7 @@
         height: 12vh;
     }
     .about-text {
-        height: 69vh;
+        height: 72vh;
     }
     sup {
         font-size: 12px;
