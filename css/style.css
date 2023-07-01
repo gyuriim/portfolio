@@ -201,7 +201,7 @@ body {
 .sub-text {
     line-height: 26px;
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 600;
 }
 .contents-icon {
     width: 33px;
@@ -301,7 +301,7 @@ body {
 }
 .right-text {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 25px;
     text-align: justify;
 }
@@ -338,13 +338,15 @@ sup {
 .panel-body {
     display: none;
     height: 66vh;
+    font-weight: 600;
+
 }
 .active .panel-body {
     display: block;
 }
 .panel-body-text {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 25px;
     letter-spacing: 0px;
     display: flex;
@@ -380,7 +382,6 @@ sup {
     justify-content: flex-start;
     font-size: 18px;
     line-height: 25px;
-    font-weight: 800;
     margin-bottom: 10px;
 }
 .panel-body-text-sort-left {
